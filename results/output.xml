@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.7 on win32)" generated="2025-02-19T08:44:12.152680" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\motormojo_v1.0\tests\login_test.robot">
+<test id="s1-t1" name="User Can Log In And Click EV Button" line="7">
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:12.836069" level="INFO">Opening browser 'chrome' to base url 'https://alpha.mojomotor.in/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-19T08:44:12.836069" elapsed="37.785311"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-19T08:44:50.621380" elapsed="0.073540"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${EMAIL_FIELD}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-19T08:44:50.694920" elapsed="0.045255"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:44:12.836069" elapsed="37.904106"/>
+</kw>
+<kw name="Input Email" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:44:50.742486" elapsed="0.131049"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:50.881192" level="INFO">Typing text 'aravindhan.a@pilabz.in' into text field 'id=email_id'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:44:50.881192" elapsed="0.398253"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<status status="PASS" start="2025-02-19T08:44:50.741315" elapsed="0.540155"/>
+</kw>
+<kw name="Input Password" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:44:51.281470" elapsed="0.052107"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:51.333577" level="INFO">Typing text 'Aravind*16' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:44:51.333577" elapsed="0.262809"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2025-02-19T08:44:51.281470" elapsed="0.314916"/>
+</kw>
+<kw name="Click Login Button" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:44:51.596386" elapsed="0.042952"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:51.639338" level="INFO">Clicking button 'css=.primarybt'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:44:51.639338" elapsed="2.532590"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EV_BUTTON}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:44:54.171928" elapsed="0.904950"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:44:51.596386" elapsed="3.480492"/>
+</kw>
+<kw name="Click EV Button" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${HOME_SECTION}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.078885" elapsed="0.007529"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EV_BUTTON}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.086414" elapsed="0.031554"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:55.117968" level="INFO">Clicking element 'xpath=//div[contains(text(), 'EV')]'.</msg>
+<arg>${EV_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.117968" elapsed="0.186106"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:44:55.304074" level="INFO">"EV Button Clicked Successfully"</msg>
+<arg>"EV Button Clicked Successfully"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.304074" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:44:55.078885" elapsed="0.233286"/>
+</kw>
+<kw name="Switch To New Window" owner="keywords">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:55.314658" level="INFO">${old_handles} = ['F281D6106B4B38F6D095BA89EC52D6CA']</msg>
+<var>${old_handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.312171" elapsed="0.002487"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check If New Window Opened" owner="keywords">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:55.314658" level="INFO">${new_handles} = ['F281D6106B4B38F6D095BA89EC52D6CA']</msg>
+<var>${new_handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-02-19T08:44:55.314658" level="INFO">${diff} = 0</msg>
+<var>${diff}</var>
+<arg>len(set(${new_handles}) - set(${old_handles}))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${diff} &gt; 0</arg>
+<arg>Log</arg>
+<arg>"New window detected"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${diff} &gt; 0</value>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.000000"/>
+</return>
+<arg>${old_handles}</arg>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.000000"/>
+</kw>
+<arg>15s</arg>
+<arg>1s</arg>
+<arg>Check If New Window Opened</arg>
+<arg>${old_handles}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.000000"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:55.314658" level="INFO">${new_handles} = ['F281D6106B4B38F6D095BA89EC52D6CA']</msg>
+<var>${new_handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${new_handles}[-1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.314658" elapsed="0.017270"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:44:55.331928" level="INFO">"Switched to new window"</msg>
+<arg>"Switched to new window"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.331928" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:44:55.312171" elapsed="0.020775"/>
+</kw>
+<kw name="Select Items Per Page 50" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ITEMS_PER_PAGE_DROPDOWN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:44:55.333520" elapsed="1.388796"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:56.722316" level="INFO">Clicking element 'xpath=//select[@class='form-select']'.</msg>
+<arg>${ITEMS_PER_PAGE_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:44:56.722316" elapsed="0.175223"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ITEMS_PER_PAGE_OPTION_50}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:44:56.897539" elapsed="0.053559"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:44:56.951098" level="INFO">Clicking element 'xpath=//select[@class='form-select']/option[@value='50']'.</msg>
+<arg>${ITEMS_PER_PAGE_OPTION_50}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:44:56.951098" elapsed="0.066556"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:44:57.017654" level="INFO">"Set Items per page to 50"</msg>
+<arg>"Set Items per page to 50"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:44:57.017654" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.017732" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:44:57.017654" elapsed="3.000078"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:44:55.333520" elapsed="4.684212"/>
+</kw>
+<kw name="Click Create New Vehicle" owner="keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Create New Vehicle</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.017732" elapsed="0.036847"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CREATE_VEHICLE_BTN}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.054579" elapsed="0.044480"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${CREATE_VEHICLE_BTN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.099059" elapsed="0.054716"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${CREATE_VEHICLE_BTN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.153775" elapsed="0.294364"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:00.448139" level="INFO">Clicking element 'xpath=//button[normalize-space()='Create New Vehicle']'.</msg>
+<arg>${CREATE_VEHICLE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.448139" elapsed="0.184788"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.632927" level="INFO">"Create New Vehicle button clicked"</msg>
+<arg>"Create New Vehicle button clicked"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.632927" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:00.017732" elapsed="0.615195"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Create New Vehicle (JS)">
+<msg time="2025-02-19T08:45:00.639207" level="FAIL">No keyword with name 'Click Create New Vehicle (JS)' found. Did you mean:
+    keywords.Click Create New Vehicle</msg>
+<status status="FAIL" start="2025-02-19T08:45:00.639207" elapsed="0.000000">No keyword with name 'Click Create New Vehicle (JS)' found. Did you mean:
+    keywords.Click Create New Vehicle</status>
+</kw>
+<arg>Click Create New Vehicle (JS)</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.632927" elapsed="0.006280"/>
+</kw>
+<kw name="Generate Random Vehicle Name" owner="keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-02-19T08:45:00.639207" level="INFO">${random} = OlbeQ</msg>
+<var>${random}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.639207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.639207" level="INFO">${random_vehicle_name} = Vehicle_OlbeQ</msg>
+<var>${random_vehicle_name}</var>
+<arg>Vehicle_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.639207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.639207" level="INFO">${random_description} = Description_OlbeQ</msg>
+<var>${random_description}</var>
+<arg>Description_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.639207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.639207" level="INFO">${random_vehicle_name} = Vehicle_OlbeQ</msg>
+<arg>${random_vehicle_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.639207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.639207" level="INFO">${random_description} = Description_OlbeQ</msg>
+<arg>${random_description}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.639207" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.639207" level="INFO">"Generated Vehicle Name: Vehicle_OlbeQ"</msg>
+<arg>"Generated Vehicle Name: ${random_vehicle_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.639207" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.647540" level="INFO">"Generated Vehicle Description: Description_OlbeQ"</msg>
+<arg>"Generated Vehicle Description: ${random_description}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.647540" elapsed="0.000520"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:00.639207" elapsed="0.008853"/>
+</kw>
+<kw name="Fill Vehicle Details And Submit" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${VEHICLE_NAME_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.648400" elapsed="0.333938"/>
+</kw>
+<kw name="Generate Random Vehicle Name" owner="keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-02-19T08:45:00.982338" level="INFO">${random} = KBOXY</msg>
+<var>${random}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.982338" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.995762" level="INFO">${random_vehicle_name} = Vehicle_KBOXY</msg>
+<var>${random_vehicle_name}</var>
+<arg>Vehicle_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.982338" elapsed="0.013424"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.995762" level="INFO">${random_description} = Description_KBOXY</msg>
+<var>${random_description}</var>
+<arg>Description_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.995762" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.995762" level="INFO">${random_vehicle_name} = Vehicle_KBOXY</msg>
+<arg>${random_vehicle_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.995762" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.999203" level="INFO">${random_description} = Description_KBOXY</msg>
+<arg>${random_description}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.995762" elapsed="0.003441"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.999203" level="INFO">"Generated Vehicle Name: Vehicle_KBOXY"</msg>
+<arg>"Generated Vehicle Name: ${random_vehicle_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.999203" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:00.999203" level="INFO">"Generated Vehicle Description: Description_KBOXY"</msg>
+<arg>"Generated Vehicle Description: ${random_description}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.999203" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:00.982338" elapsed="0.016865"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:01.001219" level="INFO">Typing text 'Vehicle_KBOXY' into text field 'id=vehicleName'.</msg>
+<arg>${VEHICLE_NAME_FIELD}</arg>
+<arg>${random_vehicle_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:00.999203" elapsed="0.317617"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:01.316820" level="INFO">Typing text 'Description_KBOXY' into text field 'id=vehicleDescription'.</msg>
+<arg>${VEHICLE_DESC_FIELD}</arg>
+<arg>${random_description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:01.316820" elapsed="0.248222"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:01.565557" level="INFO">Clicking button 'xpath=//button[text()='Save']'.</msg>
+<arg>${SAVE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:01.565557" elapsed="0.219035"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:01.784592" level="INFO">"Vehicle created with name: Vehicle_KBOXY"</msg>
+<arg>"Vehicle created with name: ${random_vehicle_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:01.784592" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:00.648400" elapsed="1.136192"/>
+</kw>
+<kw name="Click Created Vehicle" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:01.784592" level="INFO">${vehicle_xpath} = xpath=//td[contains(text(),'Vehicle_KBOXY')]</msg>
+<var>${vehicle_xpath}</var>
+<arg>xpath=//td[contains(text(),'${vehicle_name}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:01.784592" elapsed="0.008172"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${vehicle_xpath}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:01.792764" elapsed="0.688623"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${vehicle_xpath}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:02.481387" elapsed="0.309135"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:02.790522" level="INFO">Clicking element 'xpath=//td[contains(text(),'Vehicle_KBOXY')]'.</msg>
+<arg>${vehicle_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:02.790522" elapsed="0.175785"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:02.967453" level="INFO">"Clicked on the created vehicle: Vehicle_KBOXY"</msg>
+<arg>"Clicked on the created vehicle: ${vehicle_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:02.966307" elapsed="0.001146"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:07.968184" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:02.967453" elapsed="5.000731"/>
+</kw>
+<kw name="Click Next Buttons And Run" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:07.969822" level="INFO">${next_button} = xpath=//button[contains(text(),'Next')]</msg>
+<var>${next_button}</var>
+<arg>xpath=//button[contains(text(),'Next')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:07.969822" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:07.969822" level="INFO">${go_to_motor_log_button} = xpath=//button[contains(text(),'Go to Motor Log')]</msg>
+<var>${go_to_motor_log_button}</var>
+<arg>xpath=//button[contains(text(),'Go to Motor Log')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:07.969822" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:07.969822" elapsed="0.045529"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:08.015351" elapsed="0.044385"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:08.059736" elapsed="0.299768"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:08.359504" level="INFO">Clicking element 'xpath=//button[contains(text(),'Next')]'.</msg>
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:08.359504" elapsed="0.144521"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:11.504338" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:08.504025" elapsed="3.000313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:11.504338" elapsed="0.728352"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:12.232690" elapsed="0.050465"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:12.283155" elapsed="0.346201"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:12.629356" level="INFO">Clicking element 'xpath=//button[contains(text(),'Next')]'.</msg>
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:12.629356" elapsed="0.190939"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:15.825774" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:12.820295" elapsed="3.005479"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:15.825774" level="INFO">${run_button} = xpath=//button[contains(text(),'Run')]</msg>
+<var>${run_button}</var>
+<arg>xpath=//button[contains(text(),'Run')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:15.825774" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${run_button}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:15.825774" elapsed="0.041319"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${run_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:15.867093" elapsed="0.047797"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${run_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:15.914890" elapsed="0.302953"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:16.217843" level="INFO">Clicking element 'xpath=//button[contains(text(),'Run')]'.</msg>
+<arg>${run_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:16.217843" elapsed="0.148626"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:16.366469" level="INFO">"Clicked the 'Run' button successfully"</msg>
+<arg>"Clicked the 'Run' button successfully"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:16.366469" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:26.366691" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:16.366469" elapsed="10.000222"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:26.366691" elapsed="0.047654"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:26.414345" elapsed="0.027236"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:26.443860" elapsed="0.293410"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:26.737270" level="INFO">Clicking element 'xpath=//button[contains(text(),'Next')]'.</msg>
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:26.737270" elapsed="0.142184"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:29.880428" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:26.879968" elapsed="3.000460"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:29.880428" elapsed="0.016090"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:29.905796" elapsed="0.058587"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:29.964383" elapsed="0.330659"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:30.295042" level="INFO">Clicking element 'xpath=//button[contains(text(),'Next')]'.</msg>
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:30.295042" elapsed="0.156584"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:33.451976" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:30.451626" elapsed="3.000350"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${go_to_motor_log_button}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:33.451976" elapsed="0.036353"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:33.488329" level="INFO">Clicking element 'xpath=//button[contains(text(),'Go to Motor Log')]'.</msg>
+<arg>${go_to_motor_log_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:33.488329" elapsed="0.176148"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:33.664477" level="INFO">"Clicked 'Go to Motor Log' button successfully"</msg>
+<arg>"Clicked 'Go to Motor Log' button successfully"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:33.664477" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:38.680083" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:33.676114" elapsed="5.003969"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:07.969822" elapsed="30.710261"/>
+</kw>
+<arg>${random_vehicle_name}</arg>
+<status status="PASS" start="2025-02-19T08:45:01.784592" elapsed="36.895491"/>
+</kw>
+<kw name="Select Items Per Page 50" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ITEMS_PER_PAGE_DROPDOWN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:38.680083" elapsed="0.031450"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:38.711533" level="INFO">Clicking element 'xpath=//select[@class='form-select']'.</msg>
+<arg>${ITEMS_PER_PAGE_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:38.711533" elapsed="0.169782"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ITEMS_PER_PAGE_OPTION_50}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:38.881315" elapsed="0.036621"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:38.919605" level="INFO">Clicking element 'xpath=//select[@class='form-select']/option[@value='50']'.</msg>
+<arg>${ITEMS_PER_PAGE_OPTION_50}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:38.919605" elapsed="0.059737"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:38.980643" level="INFO">"Set Items per page to 50"</msg>
+<arg>"Set Items per page to 50"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:38.979342" elapsed="0.001301"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:41.981995" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:38.980643" elapsed="3.001352"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:38.680083" elapsed="3.301912"/>
+</kw>
+<kw name="Click Create New Motor" owner="keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Create New Motor</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-19T08:45:41.981995" elapsed="0.039403"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CREATE_MOTOR_BTN}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.021398" elapsed="0.032316"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${CREATE_MOTOR_BTN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.053714" elapsed="0.048129"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${CREATE_MOTOR_BTN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.101843" elapsed="0.294031"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:42.395874" level="INFO">Clicking element 'xpath=//button[normalize-space()='Create New Motor']'.</msg>
+<arg>${CREATE_MOTOR_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.395874" elapsed="0.140952"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.536826" level="INFO">"Create New Motor button clicked"</msg>
+<arg>"Create New Motor button clicked"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.536826" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:41.981995" elapsed="0.554831"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Create New Motor (JS)">
+<msg time="2025-02-19T08:45:42.545977" level="FAIL">No keyword with name 'Click Create New Motor (JS)' found. Did you mean:
+    keywords.Click Create New Motor</msg>
+<status status="FAIL" start="2025-02-19T08:45:42.545977" elapsed="0.000000">No keyword with name 'Click Create New Motor (JS)' found. Did you mean:
+    keywords.Click Create New Motor</status>
+</kw>
+<arg>Click Create New Motor (JS)</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.545977" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random Motor Name" owner="keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-02-19T08:45:42.545977" level="INFO">${random} = lFdaF</msg>
+<var>${random}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.545977" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.545977" level="INFO">${random_motor_name} = Motor_lFdaF</msg>
+<var>${random_motor_name}</var>
+<arg>Motor_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.545977" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.545977" level="INFO">${random_description} = Description_lFdaF</msg>
+<var>${random_description}</var>
+<arg>Description_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.545977" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.545977" level="INFO">${random_motor_name} = Motor_lFdaF</msg>
+<arg>${random_motor_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.545977" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.553841" level="INFO">${random_description} = Description_lFdaF</msg>
+<arg>${random_description}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.553841" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.553841" level="INFO">"Generated Motor Name: Motor_lFdaF"</msg>
+<arg>"Generated Motor Name: ${random_motor_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.553841" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.553841" level="INFO">"Generated Motor Description: Description_lFdaF"</msg>
+<arg>"Generated Motor Description: ${random_description}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.553841" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:42.545977" elapsed="0.007864"/>
+</kw>
+<kw name="Fill Motor Details And Submit" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MOTOR_NAME_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.553841" elapsed="0.292104"/>
+</kw>
+<kw name="Generate Random Motor Name" owner="keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-02-19T08:45:42.845945" level="INFO">${random} = nKXAA</msg>
+<var>${random}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.845945" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.845945" level="INFO">${random_motor_name} = Motor_nKXAA</msg>
+<var>${random_motor_name}</var>
+<arg>Motor_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.845945" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.849149" level="INFO">${random_description} = Description_nKXAA</msg>
+<var>${random_description}</var>
+<arg>Description_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.849149" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.849149" level="INFO">${random_motor_name} = Motor_nKXAA</msg>
+<arg>${random_motor_name}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.849149" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.849149" level="INFO">${random_description} = Description_nKXAA</msg>
+<arg>${random_description}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.849149" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.849149" level="INFO">"Generated Motor Name: Motor_nKXAA"</msg>
+<arg>"Generated Motor Name: ${random_motor_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.849149" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:42.849149" level="INFO">"Generated Motor Description: Description_nKXAA"</msg>
+<arg>"Generated Motor Description: ${random_description}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.849149" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:42.845945" elapsed="0.003204"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:42.849149" level="INFO">Typing text 'Motor_nKXAA' into text field 'id=motorName'.</msg>
+<arg>${MOTOR_NAME_FIELD}</arg>
+<arg>${random_motor_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:42.849149" elapsed="0.281468"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:43.130617" level="INFO">Typing text 'Description_nKXAA' into text field 'id=motorDescription'.</msg>
+<arg>${MOTOR_DESC_FIELD}</arg>
+<arg>${random_description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:43.130617" elapsed="0.216414"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:43.347031" level="INFO">Clicking button 'xpath=//button[text()='Save']'.</msg>
+<arg>${SAVE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:43.347031" elapsed="0.210534"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:43.562423" level="INFO">"Motor created with name: Motor_nKXAA"</msg>
+<arg>"Motor created with name: ${random_motor_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:43.562423" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-02-19T08:45:42.553841" elapsed="1.008582"/>
+</kw>
+<kw name="Click Created Motor" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:43.565559" level="INFO">${motor_xpath} = xpath=//td[contains(text(),'Motor_nKXAA')]</msg>
+<var>${motor_xpath}</var>
+<arg>xpath=//td[contains(text(),'${motor_name}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:43.565559" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${motor_xpath}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:43.565559" elapsed="0.481436"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${motor_xpath}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:44.046995" elapsed="0.318518"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:44.366375" level="INFO">Clicking element 'xpath=//td[contains(text(),'Motor_nKXAA')]'.</msg>
+<arg>${motor_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:44.366375" elapsed="0.205927"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:45:44.573496" level="INFO">"Clicked on the created motor: Motor_nKXAA"</msg>
+<arg>"Clicked on the created motor: ${motor_name}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:45:44.573125" elapsed="0.000371"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:49.575180" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:44.573935" elapsed="5.001245"/>
+</kw>
+<kw name="Click Next Buttons And Second Run" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:49.578837" level="INFO">${next_button} = xpath=//button[contains(text(),'Next')]</msg>
+<var>${next_button}</var>
+<arg>xpath=//button[contains(text(),'Next')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:49.578837" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:45:49.580855" level="INFO">${go_to_home_button} = xpath=//button[contains(text(),'Go to Home')]</msg>
+<var>${go_to_home_button}</var>
+<arg>xpath=//button[contains(text(),'Go to Home')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:45:49.580855" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:49.580855" elapsed="0.035219"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:49.616074" elapsed="0.058188"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:49.674262" elapsed="0.304667"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:49.978929" level="INFO">Clicking element 'xpath=//button[contains(text(),'Next')]'.</msg>
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:49.978929" elapsed="0.147008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:53.126444" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:50.125937" elapsed="3.000507"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:53.126444" elapsed="0.019557"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:53.146001" elapsed="0.079262"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:53.225263" elapsed="0.321554"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:53.546817" level="INFO">Clicking element 'xpath=//button[contains(text(),'Next')]'.</msg>
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:53.546817" elapsed="0.151928"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:45:56.699214" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:53.698745" elapsed="3.000469"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:45:56.699214" elapsed="0.048644"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:45:56.747858" elapsed="0.048307"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:45:56.796165" elapsed="0.298924"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:45:57.095089" level="INFO">Clicking element 'xpath=//button[contains(text(),'Next')]'.</msg>
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:45:57.095089" elapsed="0.125789"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T08:46:00.221231" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:45:57.220878" elapsed="3.000353"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-19T08:46:00.221231" level="INFO">${run_button} = xpath=//button[contains(text(),'Run')]</msg>
+<var>${run_button}</var>
+<arg>xpath=//button[contains(text(),'Run')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-19T08:46:00.221231" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${run_button}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-19T08:46:00.221231" elapsed="0.028976"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${run_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-02-19T08:46:00.250207" elapsed="0.033987"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${run_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-19T08:46:00.284194" elapsed="0.285217"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-19T08:46:00.569411" level="INFO">Clicking element 'xpath=//button[contains(text(),'Run')]'.</msg>
+<arg>${run_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-19T08:46:00.569411" elapsed="0.147346"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-19T08:46:00.716757" level="INFO">"Clicked the 'Run' button successfully"</msg>
+<arg>"Clicked the 'Run' button successfully"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-19T08:46:00.716757" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-19T09:26:35.289393" level="INFO">Slept 3 minutes.</msg>
+<arg>180s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-19T08:46:00.716757" elapsed="2434.572636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-02-19T09:26:46.885803" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF729596EE5+28773]
+	(No symbol) [0x00007FF7295025D0]
+	(No symbol) [0x00007FF729398DDC]
+	(No symbol) [0x00007FF7293DF17F]
+	(No symbol) [0x00007FF729417112]
+	(No symbol) [0x00007FF729411AA9]
+	(No symbol) [0x00007FF729410B59]
+	(No symbol) [0x00007FF729365595]
+	GetHandleVerifier [0x00007FF7298E422D+3490733]
+	GetHandleVerifier [0x00007FF7298FBA13+3586963]
+	GetHandleVerifier [0x00007FF7298F144D+3544525]
+	GetHandleVerifier [0x00007FF72965C9AA+838442]
+	(No symbol) [0x00007FF72950D01F]
+	(No symbol) [0x00007FF7293641AE]
+	GetHandleVerifier [0x00007FF72996ED78+4058872]
+	BaseThreadInitThunk [0x00007FF88C48E8D7+23]
+	RtlUserThreadStart [0x00007FF88D5DBF2C+44]
+</msg>
+<msg time="2025-02-19T09:26:46.885803" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=133.0.6943.98)
+Stacktrace:
+	GetHandleVerifier [0x00007FF729596EE5+28773]
+	(No symbol) [0x00007FF7295025D0]
+	(No symbol) [0x00007FF729398FAA]
+	(No symbol) [0x00007FF729384DA5]
+	(No symbol) [0x00007FF7293A973A]
+	(No symbol) [0x00007FF72941EFDF]
+	(No symbol) [0x00007FF72943EFE2]
+	(No symbol) [0x00007FF729417023]
+	(No symbol) [0x00007FF7293DFF5E]
+	(No symbol) [0x00007FF7293E11E3]
+	GetHandleVerifier [0x00007FF7298E422D+3490733]
+	GetHandleVerifier [0x00007FF7298FBA13+3586963]
+	GetHandleVerifier [0x00007FF7298F144D+3544525]
+	GetHandleVerifier [0x00007FF72965C9AA+838442]
+	(No symbol) [0x00007FF72950D01F]
+	(No symbol) [0x00007FF7295095E4]
+	(No symbol) [0x00007FF729509786]
+	(No symbol) [0x00007FF7294F8CB9]
+	BaseThreadInitThunk [0x00007FF88C48E8D7+23]
+	RtlUserThreadStart [0x00007FF88D5DBF2C+44]
+</msg>
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-02-19T09:26:35.291406" elapsed="11.608894">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=133.0.6943.98)
+Stacktrace:
+	GetHandleVerifier [0x00007FF729596EE5+28773]
+	(No symbol) [0x00007FF7295025D0]
+	(No symbol) [0x00007FF729398FAA]
+	(No symbol) [0x00007FF729384DA5]
+	(No symbol) [0x00007FF7293A973A]
+	(No symbol) [0x00007FF72941EFDF]
+	(No symbol) [0x00007FF72943EFE2]
+	(No symbol) [0x00007FF729417023]
+	(No symbol) [0x00007FF7293DFF5E]
+	(No symbol) [0x00007FF7293E11E3]
+	GetHandleVerifier [0x00007FF7298E422D+3490733]
+	GetHandleVerifier [0x00007FF7298FBA13+3586963]
+	GetHandleVerifier [0x00007FF7298F144D+3544525]
+	GetHandleVerifier [0x00007FF72965C9AA+838442]
+	(No symbol) [0x00007FF72950D01F]
+	(No symbol) [0x00007FF7295095E4]
+	(No symbol) [0x00007FF729509786]
+	(No symbol) [0x00007FF7294F8CB9]
+	BaseThreadInitThunk [0x00007FF88C48E8D7+23]
+	RtlUserThreadStart [0x00007FF88D5DBF2C+44]
+</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.900300" elapsed="0.002020"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.902320" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.905122" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.905122" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.905122" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.906187" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.906187" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.906187" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.906187" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.906187" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.907498" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.907498" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.907498" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.907498" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${next_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.907498" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.909653" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${download_button}</var>
+<arg>xpath=//button[contains(text(),'Download')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.910665" elapsed="0.000511"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${download_button}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.911176" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${download_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.913196" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>"Clicked 'Download' button successfully"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.913196" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${go_to_home_button}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.913196" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${go_to_home_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.913196" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>"Clicked 'Go to Home' button successfully"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.913196" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-02-19T08:45:49.578837" elapsed="2457.336377">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=133.0.6943.98)
+Stacktrace:
+	GetHandleVerifier [0x00007FF729596EE5+28773]
+	(No symbol) [0x00007FF7295025D0]
+	(No symbol) [0x00007FF729398FAA]
+	(No symbol) [0x00007FF729384DA5]
+	(No symbol) [0x00007FF7293A973A]
+	(No symbol) [0x00007FF72941EFDF]
+	(No symbol) [0x00007FF72943EFE2]
+	(No symbol) [0x00007FF729417023]
+	(No symbol) [0x00007FF7293DFF5E]
+	(No symbol) [0x00007FF7293E11E3]
+	GetHandleVerifier [0x00007FF7298E422D+3490733]
+	GetHandleVerifier [0x00007FF7298FBA13+3586963]
+	GetHandleVerifier [0x00007FF7298F144D+3544525]
+	GetHandleVerifier [0x00007FF72965C9AA+838442]
+	(No symbol) [0x00007FF72950D01F]
+	(No symbol) [0x00007FF7295095E4]
+	(No symbol) [0x00007FF729509786]
+	(No symbol) [0x00007FF7294F8CB9]
+	BaseThreadInitThunk [0x00007FF88C48E8D7+23]
+	RtlUserThreadStart [0x00007FF88D5DBF2C+44]
+</status>
+</kw>
+<arg>${random_motor_name}</arg>
+<status status="FAIL" start="2025-02-19T08:45:43.565559" elapsed="2463.349655">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=133.0.6943.98)
+Stacktrace:
+	GetHandleVerifier [0x00007FF729596EE5+28773]
+	(No symbol) [0x00007FF7295025D0]
+	(No symbol) [0x00007FF729398FAA]
+	(No symbol) [0x00007FF729384DA5]
+	(No symbol) [0x00007FF7293A973A]
+	(No symbol) [0x00007FF72941EFDF]
+	(No symbol) [0x00007FF72943EFE2]
+	(No symbol) [0x00007FF729417023]
+	(No symbol) [0x00007FF7293DFF5E]
+	(No symbol) [0x00007FF7293E11E3]
+	GetHandleVerifier [0x00007FF7298E422D+3490733]
+	GetHandleVerifier [0x00007FF7298FBA13+3586963]
+	GetHandleVerifier [0x00007FF7298F144D+3544525]
+	GetHandleVerifier [0x00007FF72965C9AA+838442]
+	(No symbol) [0x00007FF72950D01F]
+	(No symbol) [0x00007FF7295095E4]
+	(No symbol) [0x00007FF729509786]
+	(No symbol) [0x00007FF7294F8CB9]
+	BaseThreadInitThunk [0x00007FF88C48E8D7+23]
+	RtlUserThreadStart [0x00007FF88D5DBF2C+44]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-02-19T09:26:46.915214" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-02-19T08:44:12.833124" elapsed="2554.082090">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=133.0.6943.98)
+Stacktrace:
+	GetHandleVerifier [0x00007FF729596EE5+28773]
+	(No symbol) [0x00007FF7295025D0]
+	(No symbol) [0x00007FF729398FAA]
+	(No symbol) [0x00007FF729384DA5]
+	(No symbol) [0x00007FF7293A973A]
+	(No symbol) [0x00007FF72941EFDF]
+	(No symbol) [0x00007FF72943EFE2]
+	(No symbol) [0x00007FF729417023]
+	(No symbol) [0x00007FF7293DFF5E]
+	(No symbol) [0x00007FF7293E11E3]
+	GetHandleVerifier [0x00007FF7298E422D+3490733]
+	GetHandleVerifier [0x00007FF7298FBA13+3586963]
+	GetHandleVerifier [0x00007FF7298F144D+3544525]
+	GetHandleVerifier [0x00007FF72965C9AA+838442]
+	(No symbol) [0x00007FF72950D01F]
+	(No symbol) [0x00007FF7295095E4]
+	(No symbol) [0x00007FF729509786]
+	(No symbol) [0x00007FF7294F8CB9]
+	BaseThreadInitThunk [0x00007FF88C48E8D7+23]
+	RtlUserThreadStart [0x00007FF88D5DBF2C+44]
+</status>
+</test>
+<status status="FAIL" start="2025-02-19T08:44:12.152680" elapsed="2554.768952"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-19T09:26:46.885803" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF729596EE5+28773]
+	(No symbol) [0x00007FF7295025D0]
+	(No symbol) [0x00007FF729398DDC]
+	(No symbol) [0x00007FF7293DF17F]
+	(No symbol) [0x00007FF729417112]
+	(No symbol) [0x00007FF729411AA9]
+	(No symbol) [0x00007FF729410B59]
+	(No symbol) [0x00007FF729365595]
+	GetHandleVerifier [0x00007FF7298E422D+3490733]
+	GetHandleVerifier [0x00007FF7298FBA13+3586963]
+	GetHandleVerifier [0x00007FF7298F144D+3544525]
+	GetHandleVerifier [0x00007FF72965C9AA+838442]
+	(No symbol) [0x00007FF72950D01F]
+	(No symbol) [0x00007FF7293641AE]
+	GetHandleVerifier [0x00007FF72996ED78+4058872]
+	BaseThreadInitThunk [0x00007FF88C48E8D7+23]
+	RtlUserThreadStart [0x00007FF88D5DBF2C+44]
+</msg>
+</errors>
+</robot>
