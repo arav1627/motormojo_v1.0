@@ -2,8 +2,17 @@
 Library  SeleniumLibrary
 Resource  ../resources/variables.robot
 Resource  ../resources/keywords.robot
+Resource  ../resources/mongodb.robot
 
 *** Test Cases ***
+    Verify MongoDB Connection
+    Connect To MongoDB
+    ${collections}  List Collections
+    Log  "Collections in DB: ${collections}"
+    Should Contain  ${collections}  Vehicle  "Vehicle collection not found!"
+    Should Contain  ${collections}  Motor  "Motor collection not found!"
+    Disconnect From MongoDB
+
 User Can Log In And Click EV Button
     Open Browser To Login Page
     Input Email  ${VALID_EMAIL}
@@ -17,9 +26,9 @@ User Can Log In And Click EV Button
     # If normal click fails, try JavaScript click
     Run Keyword And Ignore Error  Click Create New Vehicle (JS)
 
-    Generate Random Vehicle Name
-    Fill Vehicle Details And Submit
-    Click Created Vehicle  ${random_vehicle_name}
+    # Fetch existing vehicle name from MongoDB
+    ${vehicle_name}  Fetch Random Vehicle Name
+    Click Created Vehicle  ${vehicle_name}
 
     Select Items Per Page 50  # New Step Added Here
     Click Create New Motor  # Try normal click
@@ -27,8 +36,8 @@ User Can Log In And Click EV Button
     # If normal click fails, try JavaScript click
     Run Keyword And Ignore Error  Click Create New Motor (JS)
 
-    Generate Random Motor Name
-    Fill Motor Details And Submit
-    Click Created Motor  ${random_motor_name}
+    # Fetch existing motor name from MongoDB
+    ${motor_name}  Fetch Random Motor Name
+    Click Created Motor  ${motor_name}
 
     Close Browser
